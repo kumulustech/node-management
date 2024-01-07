@@ -29,7 +29,7 @@ read -s TAILSCALE_TOKEN
 fi
 
 # Authenticate and connect to Tailscale
-sudo tailscale up --authkey=$TAILSCALE_TOKEN --advertise-routes=172.18.0.0/16 --hostname=$HOSTNAME
+sudo tailscale up --authkey=$TAILSCALE_TOKEN --advertise-routes=172.18.0.0/16 --hostname=$HOSTNAME --ssh
 
 # Enable the Tailscale service to start on boot
 sudo systemctl enable --now tailscaled
